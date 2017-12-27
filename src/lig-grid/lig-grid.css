@@ -1,0 +1,637 @@
+/*!
+* uigrid.css by @hyj
+* Copyright 2016
+*/
+@CHARSET "UTF-8";
+.uigrid{
+	position: relative;
+	border-left: 1px solid #dde5e7;
+	border-right: 1px solid #dde5e7;
+	border-bottom: 1px solid #dde5e7;
+    overflow: hidden
+}
+.uigrid-head{
+	background: #ffffff;
+	overflow: hidden;
+    position: relative;
+    border-top: 1px solid #dde5e7;
+    border-bottom: 1px solid #dde5e7;
+    z-index: 999
+}
+.uigrid-line{
+	position: absolute;
+    width: 1px;
+    background-color: #bbbbbb;
+    top: 0;
+    cursor: e-resize;
+    z-index: 1002
+}
+.uigrid-head-box{
+    float: left;
+    padding-right: 20px
+}
+.uigrid-view1{
+	position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.uigrid-body{
+	margin-bottom: -1px;
+}
+.uigrid-view1 .uigrid-head-box{
+	padding-right: 0
+}
+.uigrid-view1 .uigrid-body{
+	overflow: hidden
+}
+.uigrid-view1 .uigrid-body-inner{
+	padding-bottom: 20px;
+}
+.uigrid-view1 .uigrid-fixed{
+	z-index: 101
+}
+.uigrid-view2{
+	position: relative
+}
+.uigrid-view2 .uigrid-body{
+	overflow: auto
+}
+.uigrid-view2 .uigrid-fixed{
+	z-index: 100
+}
+.uigrid-fixed{
+	position: absolute;
+    left: 0;
+}
+.uigrid-head th>div i{
+	margin-left: 3px;
+	color: #9b9b9b
+}
+.checks{
+	padding: 8px 10px 9px;
+	width: 20px
+}
+.uigrid table tr th,
+.uigrid table tr td{
+    border-right: 1px solid #f1f1f1
+}
+.uigrid table tr.ug-child th,
+.uigrid table tr.ug-child td{
+    border-bottom: 0
+}
+.uigrid table tr.ug-child tr td:last-child{
+	border-right: 0
+}
+.uigrid table tr td,
+.uigrid table tr.ug-child>td{
+	border-bottom: 1px solid #f1f1f1
+}
+.uigrid-body>table>tbody>tr:last-child td{
+	margin-bottom: -1px
+}
+.uigrid table tr{
+	background: #ffffff
+}
+.uigrid-link a{
+	color: #127dbc;
+	cursor: pointer
+}
+.uigrid table tr th>div{
+	text-overflow: ellipsis;
+    white-space: nowrap
+}
+.tree_close,.tree_open,.tree_child{
+	line-height: 0;
+    width: 16px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin: 5px 5px 0 0;
+    border: 0 none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+	background-image: url("images/ui-grid.png")
+}
+.uigrid .ui-tree .tree_close{
+	background-position: -23px 0px
+}
+.uigrid .ui-tree .tree_open{
+	background-position: -3px 0px
+}
+.uigrid .ui-tree .tree_child{
+	background-position: -41px 0px
+}
+.ui-tree>div>div{
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden
+}
+.uigrid table tr.tr_child>td>div{
+	padding: 0
+}
+.uigrid table tr.tr_child>td{
+	border-bottom: 0
+}
+.uigrid table tr.tr_child tr td:last-child{
+	border-right: 0
+}
+.uigrid table tr.no_child td td{
+	border-bottom: 0
+}
+.uigrid table tr.no_child td tr:last-child td{
+	border-bottom: 1px solid #f1f1f1
+}
+.uigrid table tr th>div,
+.uigrid table tr td>div{
+	text-align: left;
+    overflow: hidden
+}
+.uigrid table tr th>div{
+	padding: 9px 10px;
+	height: 19px;
+    line-height: 19px
+}
+.uigrid table tr td>div{
+	padding: 4px 10px 5px;
+	height: 30px;
+    line-height: 30px
+}
+.uigrid table tr td>div input,.uigrid table tr td>div select{
+	float: left;
+}
+.uigrid .uigrid-head{
+	border-bottom: 2px solid #dee5e7
+}
+.uigrid table tr th{
+	/* font-weight: bold; */
+    color: #58666e
+}
+.uigrid table tr.odd{
+	background: #fafcfc
+}
+.uigrid.has-hover .uigrid-body table tr:hover{
+	background: #E4F2Fd
+}
+.uigrid.has-hover .uigrid-body table tr:hover>td{
+	border-color: #E4E4E4
+}
+.uigrid table tr.active{
+	background: #E4F2Fd
+}
+.uigrid table tr.active>td{
+	border-color: #E4E4E4
+}
+.uigrid table tr.bg-light{
+  background-color: #edf1f2;
+  color: #000000;
+}
+.uigrid table tr.bg-light>td{
+	border-color: #ffffff
+}
+.uigrid table tr.bg-dark {
+  background-color: #3a3f51;
+  color: #ffffff;
+}
+.uigrid table tr.bg-black {
+  background-color: #1c2b36;
+  color: #ffffff;
+}
+.uigrid table tr.bg-success {
+  background: #27c24c;
+  color: #ffffff;
+}
+.uigrid table tr.bg-info {
+  background: #23b7e5;
+  color: #ffffff;
+}
+.uigrid table tr.bg-warning {
+  background: #fad733;
+  color: #ffffff;
+}
+.uigrid table tr.bg-danger{
+  background: #f05050;
+  color: #ffffff;
+}
+.uigrid table tr.bg-white {
+  background: #ffffff;
+}
+.uigrid table tr.bg-error {
+  background: #f05050;
+  color: #ffffff;
+}
+/*  
+*不更改字体颜色，只改变背景
+*.bg-danger
+*/
+.uigrid table tr.bg-dnowhite{
+  background: #f05050;
+}
+.uigrid table tr.bg-snowhite {
+  background: #27c24c;
+}
+.uigrid table tr.bg-primary {
+  color: #f4f3f9;
+  background-color: #7266ba;
+}
+.ug-drag-header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    z-index: 1005;
+    cursor: all-scroll;
+    padding: 9px 10px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)
+}
+.ug-dragBox{
+	position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    left: 129px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    z-index: 1003;
+}
+/*
+* layout1
+* table閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷�
+*
+*/
+.uigrid.layout1{
+	font-size: 12px
+}
+.uigrid.layout1 table tr td>div{
+	text-overflow: ellipsis;
+    white-space: nowrap
+}
+/*
+* layout2
+* 閿熸枻鎷烽敓鏂ゆ嫹閿熸枻鎷烽敓鏂ゆ嫹閿熸帴锟�
+*
+*/
+.uigrid.layout2 .uigrid-head>.uigrid-head-box>table,.uigrid.layout2 .uigrid-body>table{width: 100%}
+.uigrid.layout2 table tr th.th_scroll,.uigrid.layout2 table tr th.th_scroll>div{width:16px}
+.uigrid.layout2 table tr th.th_scroll>div{padding:9px 0 10px}
+.uigrid.layout2 table tr td>div{
+	text-overflow: ellipsis;
+    white-space: nowrap
+}
+.uigrid.layout2 .uigrid-view2 .uigrid-body{overflow-y:scroll}
+.uigrid.layout2 .uigrid-head-box{
+	float: none;
+    padding-right: 0
+}
+.uigrid-tool{
+    background: #f6f8f8;
+    height:48px;
+    line-height: 48px;
+    padding-left:15px;
+    border-left: 1px solid #dde7e9;
+    border-right: 1px solid #dde7e9
+}
+.uigrid-tool-left{
+    height: 48px;
+    line-height: 44px;
+    overflow: hidden
+}
+.uigrid-tool-left .btn{
+	margin-right: 6px
+}
+.uigrid-tool-left .btn.btn-green{
+	margin-left: 6px;
+	margin-right: 0
+}
+.uigrid-tool-search{
+	position: relative;
+	padding: 9px 0
+}
+.uigrid-search{
+	float: left;
+    height: 30px
+}
+.search-more{
+	line-height:30px;
+	font-size:13px;
+	float:left;
+	margin-left:10px;
+	margin-right:15px;
+	color:#23b7e5
+}
+.uigrid-search>input{
+	height: 28px;
+    line-height: 28px;
+    width: 200px;
+    padding: 0 10px;
+    float: left;
+    border: 1px solid #dee5e7;
+    box-shadow: none;
+    border-radius: 0
+}
+.uigrid-search>span{
+	width: 29px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-left: 0;
+    border-top: 1px solid #dee5e7;
+    border-right: 1px solid #dee5e7;
+    border-bottom: 1px solid #dee5e7;
+    display: block;
+    float: right;
+    background: #ffffff
+}
+.uigrid-search>span>i{
+	font-size: 16px;
+    color: #dde6e9
+}
+.uigrid-tool-search .dropdown-menu{
+    width: 530px;
+    left: auto;
+    right: 3px;
+    top: 42px;
+    border: 1px solid #23b7e5;
+    background: #f6f8f8;
+    padding: 0;
+    margin: 0;
+    border-radius: 0
+}
+
+.uigrid-tool-search .dropdown-menu > #advanced-search{
+	background: #fff;
+    overflow: hidden;
+    padding: 10px 0 20px
+}
+
+.uigrid-search-btnbox{
+	height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-top: 1px solid #dde6e9;
+    background: #f6f8f8
+}
+
+.uigrid-search-btnbox>.btn{
+	margin-right: 6px
+}
+
+.uigrid-pages{
+	height: 23px;
+    line-height: 23px;
+    border-top: 1px solid #dde5e7;
+    background: #f1f4f5;
+    position: relative;
+    z-index: 1
+}
+.uigrid-pagesright{
+	padding-right: 20px;
+	float: right;
+	height: 23px
+}
+.uigrid-pages em{
+	color: #f05050
+}
+.uigrid-pages>span,.uigrid-pagesright>span{
+	margin-right: 10px;
+	font-family: "閿熸枻鎷烽敓鏂ゆ嫹";
+    font-size: 12px;
+    color: #717171;
+    overflow: hidden
+}
+.uigrid-pagesright select{
+	height: 20px;
+    line-height: 20px;
+    position: relative;
+    margin-top: -4px
+}
+.uigrid-pagina{
+	height: 23px;
+	line-height: 23px;
+	float: right;
+	border-left: 1px solid #dee5e7;
+	border-right: 1px solid #dee5e7;
+	border-top: 0;
+	border-bottom: 0;
+    background: #fff;
+    position: relative
+}
+.uigrid-pages.pagination{
+	height: 26px;
+    line-height: 26px;
+    background-color: transparent;
+    padding: 15px 10px;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+}
+.uigrid-pages.pagination>span{
+	float: left
+}
+.uigrid-pagina>div{
+	width: 48px;
+    border-left: 1px solid #e1e5e6;
+    border-right: 1px solid #e1e5e6;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    margin: 0 18px;
+    height: 23px
+}
+.uigrid-pagina>div>span{
+	display: inline-block;
+    width: 35px;
+    height: 100%;
+    float: left;
+    text-align: center
+}
+.uigrid-pagina-dropdown{
+	position: absolute;
+	top: initial;
+    right: -1px;
+    bottom: 100%;
+    left: initial;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 5px 0;
+    margin: 0 -20px 2px 0;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    text-align: center;
+    font-size: 12px;
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 86px;
+    min-width: 86px
+}
+.uigrid-pagina-dropdown>li>a{
+	display: block;
+    padding: 3px 0px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap
+}
+.uigrid-pagina-dropdown>li>a:hover, .uigrid-pagina-dropdown>li>a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5
+}
+.uigrid-pagina>i{
+    width: 18px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    font-size: 16px
+}
+.uigrid-pagina>i.icon-angle-left{left: 0}
+.uigrid-pagina>i.icon-angle-right{right: 0}
+.uigrid-operate,.uigrid-operate>div{width: 100px}
+
+td.uigrid-operate{
+	padding: 5px
+}
+.uigrid table tr td.uigrid-operate>div{
+	position: relative;
+    overflow: visible;
+    height: 29px;
+    padding: 0;
+    width: 110px
+}
+
+.uigrid-operate>div>div{
+	position: absolute;
+    border: 1px solid transparent;
+    padding: 4px;
+    width: 100px;
+    height: 20px;
+    z-index: 1000;
+    overflow: hidden
+}
+
+.uigrid-operate>div>div.pop{
+	z-index: 1002;
+	border: 1px solid #ccc;
+	background: #ffffff;
+    border: 1px solid rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    height: auto
+}
+
+.uigrid-operate a{
+	padding: 0;
+	float: left;
+	width: 33px;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	border-radius: 2px;
+	text-align: center;
+    font-family: "閿熸枻鎷烽敓鏂ゆ嫹"
+}
+
+.uigrid-operate i{
+	position: absolute;
+    text-align: center;
+    width: 14px;
+    height: 18px;
+    border: 1px solid #dee5e7;
+    right: 5px;
+    top: 4px;
+    z-index: 1005;
+    line-height: 18px;
+    font-size: 14px;
+    color: #717171;
+    background-color: #fafbfb;
+	background-image: -moz-linear-gradient(top,#ffffff,#f7f8f8);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#f7f8f8));
+	background-image: -webkit-linear-gradient(top,#ffffff,#f7f8f8);
+	background-image: -o-linear-gradient(top,#ffffff,#f7f8f8);
+	background-image: linear-gradient(to bottom,#ffffff,#f7f8f8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f7f8f8',GradientType=0);
+}
+
+.uigrid-operate a.btn-white{
+	width: 31px;
+	height: 18px;
+	line-height: 18px;
+	border: 1px solid #dee5e7;
+	background-color: #fafbfb;
+	background-image: -moz-linear-gradient(top,#ffffff,#f7f8f8);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#f7f8f8));
+	background-image: -webkit-linear-gradient(top,#ffffff,#f7f8f8);
+	background-image: -o-linear-gradient(top,#ffffff,#f7f8f8);
+	background-image: linear-gradient(to bottom,#ffffff,#f7f8f8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f7f8f8',GradientType=0);
+}
+.loading-mark {
+	clear: both;
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	color: #bbb;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center
+}
+.loading-mark-img {
+	height: 50px;
+	width: 50px;
+	background: url(images/loading.gif) no-repeat
+}
+.uigrid-menuext{
+	position: absolute;
+    z-index: 1100;
+}
+.uigrid-menuext>ul{
+	position: absolute;
+    z-index: 1100;
+    float: left;
+    padding: 5px 0;
+    font-size: 12px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.uigrid-menuext>ul>li{
+	display: block;
+    padding: 3px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    cursor: default;
+}
+.uigrid-menuext>ul>li:hover, .uigrid-menuext>ul>li:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
